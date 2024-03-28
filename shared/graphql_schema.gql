@@ -1,0 +1,55 @@
+type EditingLink {
+	title: String!
+	url: String!
+	description: String
+	status: learningStatus!
+	topic: String
+	note: String
+	year: Int
+	addedAt: String
+}
+enum FilterOrder {
+	custom
+	recently_added
+	none
+}
+type Link {
+	title: String!
+	url: String!
+}
+type Mutation {
+	updateTopicLearningStatus(topicName: String!, learningStatus: learningStatus!): Boolean!
+}
+type Query {
+	routesProfile: routesProfileOutput!
+}
+type User {
+	email: String!
+	name: String!
+}
+enum filter {
+	liked
+	none
+	topic
+}
+enum learningStatus {
+	Learn
+	Learning
+	Learned
+}
+type routesProfileOutput {
+	links: [Link!]!
+	showLinksStatus: learningStatus!
+	filterOrder: FilterOrder!
+	filter: filter!
+	filterTopic: String
+	userTopics: [String!]!
+	user: User!
+	editingLink: EditingLink
+	linkToEdit: String
+	searchQuery: String
+}
+schema {
+	query: Query
+	mutation: Mutation
+}

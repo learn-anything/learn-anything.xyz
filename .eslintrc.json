@@ -1,0 +1,63 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint", "eslint-comments"],
+	"ignorePatterns": [
+		"node_modules",
+		"tailwind.config.cjs",
+		"dist",
+		// test files
+		"*.test.*",
+		"*.spec.*",
+		// generated code
+		"api/edgedb/dbschema/edgeql-js"
+	],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"project": ["./tsconfig.json"],
+		"tsconfigRootDir": ".",
+		"sourceType": "module"
+	},
+	"rules": {
+		/*
+        detect unimplemented/leftover/unnecessary code
+      */
+		// "no-console": "warn",
+		"no-debugger": "warn",
+		"require-await": "warn",
+		"prefer-const": "warn",
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"argsIgnorePattern": "^_|^info$|^context$|^parent$|^args$",
+				"varsIgnorePattern": "",
+				"caughtErrorsIgnorePattern": "^_"
+			}
+		],
+		"@typescript-eslint/no-unnecessary-boolean-literal-compare": "warn",
+		"@typescript-eslint/no-unnecessary-condition": "warn",
+		"@typescript-eslint/no-unnecessary-qualifier": "warn",
+		"@typescript-eslint/no-unnecessary-type-arguments": "warn",
+		"@typescript-eslint/no-unnecessary-type-assertion": "warn",
+		"@typescript-eslint/no-unnecessary-type-constraint": "warn",
+		"@typescript-eslint/no-useless-empty-export": "warn",
+		"@typescript-eslint/no-empty-function": "warn",
+		"no-empty": "warn",
+		"@typescript-eslint/no-unused-expressions": [
+			"warn",
+			{
+				"allowShortCircuit": true,
+				"allowTernary": true,
+				"allowTaggedTemplates": true
+			}
+		],
+		"eslint-comments/no-unused-disable": "warn",
+		/*
+        prevent unexpected behavior
+      */
+		"@typescript-eslint/ban-types": "warn",
+		"@typescript-eslint/switch-exhaustiveness-check": "warn",
+		"no-fallthrough": ["warn", { "allowEmptyCase": true }],
+		"no-shadow": "warn"
+	}
+}

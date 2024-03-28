@@ -1,0 +1,40 @@
+{
+	"name": "la",
+	"scripts": {
+		"setup": "bun cmd.ts setup",
+		"web": "cd website && bun dev",
+		"app": "cd app && bun tauri:dev",
+		"cli": "cd api/edgedb && bun --watch ../../cli/cli.ts",
+		"db:ui": "cd api/edgedb && edgedb ui",
+		"grafbase": "bun cmd.ts grafbase",
+		"graphql": "bun cmd.ts graphql",
+		"graphstate-run": "cat shared/graphql_schema.gql | odin run graphstate > shared/graphql_queries.js",
+		"cmd": "bun --watch cmd.ts",
+		"ios": "cd mobile && pnpm run ios"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.3",
+		"@edgedb/generate": "^0.4.1",
+		"@grafbase/sdk": "^0.19.0",
+		"@typescript-eslint/eslint-plugin": "^7.4.0",
+		"@typescript-eslint/parser": "^7.4.0",
+		"bun-types": "1.0.35",
+		"eslint": "^8.57.0",
+		"eslint-plugin-eslint-comments": "^3.2.0",
+		"typescript": "^5.4.3"
+	},
+	"dependencies": {
+		"clsx": "^2.1.0",
+		"grafbase": "^0.65.0",
+		"graphql": "^16.8.1",
+		"js-cookie": "^3.0.5",
+		"rehype-raw": "^7.0.0",
+		"stripe": "^14.22.0",
+		"watcher": "^2.3.0"
+	},
+	"trustedDependencies": [
+		"@biomejs/biome",
+		"grafbase"
+	],
+	"packageManager": "pnpm@8.15.5+sha256.4b4efa12490e5055d59b9b9fc9438b7d581a6b7af3b5675eb5c5f447cee1a589"
+}

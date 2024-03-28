@@ -1,0 +1,25 @@
+# core
+.DS_Store
+node_modules
+.env
+.env*.local
+
+# solid
+dist
+.solid
+.vinxi
+
+# odin
+ols.json
+graphstate.bin
+
+# generated
+shared/graphql_queries.js
+shared/graphql_schema.jql
+api/grafbase/generated
+api/edgedb/dbschema/edgeql-js
+
+# other
+bun.lockb
+package-lock.json
+.grafbase

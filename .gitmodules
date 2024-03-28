@@ -1,0 +1,3 @@
+[submodule "graphstate"]
+	path = graphstate
+	url = https://github.com/learn-anything/graphstate.git

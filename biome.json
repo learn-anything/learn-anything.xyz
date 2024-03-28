@@ -1,0 +1,29 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.6.2/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": false
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"semicolons": "asNeeded"
+		}
+	},
+	"json": {
+		"parser": {
+			"allowTrailingCommas": true
+		}
+	},
+	"formatter": {
+		"lineWidth": 100,
+		"indentStyle": "tab"
+	},
+	"files": {
+		"ignore": ["shared/graphql_queries.js"]
+	}
+}

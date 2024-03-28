@@ -1,0 +1,33 @@
+{
+	"name": "app",
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"start": "vite",
+		"dev": "vite",
+		"build": "vite build",
+		"serve": "vite preview",
+		"tauri": "tauri",
+		"tauri:dev": "tauri dev"
+	},
+	"dependencies": {
+		"@tauri-apps/api": "2.0.0-beta.5",
+		"@tauri-apps/plugin-shell": "^2.0.0-beta.2",
+		"solid-js": "latest",
+		"tailwindcss": "latest"
+	},
+	"prettier": {
+		"semi": false
+	},
+	"devDependencies": {
+		"@tauri-apps/cli": "2.0.0-beta.9",
+		"autoprefixer": "^10.4.19",
+		"internal-ip": "^8.0.0",
+		"postcss": "^8.4.38",
+		"prettier": "^3.2.5",
+		"prettier-plugin-tailwindcss": "^0.5.13",
+		"typescript": "latest",
+		"vite": "latest",
+		"vite-plugin-solid": "latest"
+	}
+}
